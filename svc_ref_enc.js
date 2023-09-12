@@ -51,7 +51,7 @@ function diff(data1, data2, w, h, s, diffFrame)
     res[5] = (res.length >> 16) & 0xFF;
     res[4] = res.length >> 24;
     return res;
-};
+}; 
 
 class SVCEncoder 
 {
