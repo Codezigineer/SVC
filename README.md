@@ -20,4 +20,4 @@ They start with the bytes 0x00, 0xFF, 0x00, 0xFF, the size of the frame data (in
 
 Also, if the equality function that compares macroblocks is strict (the two macroblocks are 100% equal), then the encoder is lossless. However, if that is false, then it is lossy.
 
-I have a reference implentation encoder in JS.
+I have a reference implementation in JS.
