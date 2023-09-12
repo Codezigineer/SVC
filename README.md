@@ -18,6 +18,8 @@ Then, it stores what frame the difference is of. (for decoding purposes, and it 
 
 They start with the bytes 0x00, 0xFF, 0x00, 0xFF, the size of the frame data (including header, 32-bit, LE), with width (16-bit, LE), height (16-bit, LE), stride (8-bit), the current frame's number (if this is the 3rd frame being encoded, then this is 3) - one of the previous frame's number.
 
+Each different macroblock is stored with the macroblock number (32-bit, LE), and then the data.
+
 Also, if the equality function that compares macroblocks is strict (the two macroblocks are 100% equal), then the encoder is lossless. However, if that is false, then it is lossy.
 
 I have a reference implementation in JS.
