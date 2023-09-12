@@ -26,6 +26,24 @@ function macroblocks(data, w, h, s)
     return mbs;
 };
 
+function unmacroBlock(data, w, h, s)
+{
+    const res = new Uint8Array(w * h * s);
+
+    for(var i = 0; i != data.length; i++)
+    {
+        var x = Math.floor((i * 8) / w);
+        var y = (i * 8) % w;
+        var j = 0;
+
+        for(x += 0; x < (x + 8); x++)
+            for(y += 0; y < (y + 8); y++)
+                res[((y * w) + x) * s] = data[i][(j+=1)-1];
+    };
+
+    return res;
+};
+
 class SVCDecoder
 {
     #previousFrames = [];
