@@ -1,7 +1,6 @@
-# SVC
+# PVC
 
 A fast, small, and simple codec.
-
 
 # Explanation
 
